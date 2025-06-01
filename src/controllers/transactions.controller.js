@@ -1,6 +1,6 @@
 import { sql } from "../config/db.js";
 
-export const getTransactionsByuserid = async (req, res) => {
+export const getTransactionsByUserid = async (req, res) => {
     try {
         const { userId } = req.params;
         const transactions = await sql`
