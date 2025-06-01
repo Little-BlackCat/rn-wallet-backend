@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv, { parse } from 'dotenv';
 import { sql } from './config/db.js';
+import rateLimiter from './middleware/rate_limiter.js';
 
 dotenv.config();
 
@@ -8,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use(rateLimiter);
 app.use(express.json());
 
 const initDB = async () => {
