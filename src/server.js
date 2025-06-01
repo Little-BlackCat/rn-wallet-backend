@@ -1,4 +1,3 @@
-console.log('Starting Expense Tracker API...');
 import dotenv from 'dotenv';
 dotenv.config();
 
